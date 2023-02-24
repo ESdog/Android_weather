@@ -67,6 +67,11 @@
                     android:layout_height="match_parent"
                     android:id="@+id/idEDtcity"
                     android:importantForAutofill="no"
+                    ></com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+            ></LinearLayout>
+        ></RelativeLayout>
 
 
 
