@@ -4,21 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg_shade_1"
     tools:context=".MainActivity">
 
     <ProgressBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/idPBLoading"
-        android:visibility="gone"
+        android:visibility="visible"
         android:layout_centerInParent="true"
         />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/idRLHom"
-        android:visibility="visible"
+        android:id="@+id/idRLHome"
+        android:visibility="gone"
         >
 
         <ImageView
@@ -65,21 +66,20 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/idEDtcity"
+                    android:id="@+id/idEdtCity"
                     android:importantForAutofill="no"
                     android:background="@android:color/transparent"
                     android:inputType="text"
                     android:singleLine="true"
                     android:textColor="@color/white"
-                    android:textSize="14sp"
-                    ></com.google.android.material.textfield.TextInputEditText>
+                    android:textSize="14sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:id="@+id/isIVSearch"
+                    android:id="@+id/idIVSearch"
                     android:layout_margin="10dp"
                     android:layout_gravity="center"
                     android:background="@android:color/transparent"
@@ -126,8 +126,16 @@
                 android:layout_marginBottom="10dp"
                 android:text="Today's Weather Forcast"
                 android:textColor="@color/white"
+                android:layout_above="@id/idRvWeather"
                 android:textStyle="bold"/>
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/idRvWeather"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
         ></RelativeLayout>
 
